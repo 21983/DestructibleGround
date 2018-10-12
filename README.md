@@ -3,8 +3,8 @@
 In deze opdracht heb ik een destructible ground gemaakt. Je kan bommen met verschillende groottes laten vallen en de ground laten exploderen.
 
 ## Features
-- [Gat maken ()](https://github.com/21983/DestructibleGround/blob/701e2d5b72f42bd74ec1c063e8d04774eef0d405/DestructibleGround/Assets/Scripts/GroundScript.cs#L83-L104)
-- [Specifieke Mechanic](link)
+- [Gat maken (get/set pixels)](https://github.com/21983/DestructibleGround/blob/701e2d5b72f42bd74ec1c063e8d04774eef0d405/DestructibleGround/Assets/Scripts/GroundScript.cs#L83-L104)
+- [Polygon Collider aanpassen](https://github.com/21983/DestructibleGround/blob/701e2d5b72f42bd74ec1c063e8d04774eef0d405/DestructibleGround/Assets/Scripts/GroundScript.cs#L120-L134)
 - [Iets unieks waar je trots op bent binnen de project](link)
 
 ## Software Anaylse 
