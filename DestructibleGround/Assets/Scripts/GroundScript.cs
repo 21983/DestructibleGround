@@ -9,6 +9,8 @@ public class GroundScript : MonoBehaviour
     Texture2D cloneTexture;
     SpriteRenderer sr;
 
+    PolygonCollider2D polygonCollider;
+
     float widthWorld, heightWorld;
     int widthPixel, heightPixel;
 
@@ -57,7 +59,7 @@ public class GroundScript : MonoBehaviour
     {
         cloneTexture = new Texture2D(baseTexture.width, baseTexture.height, TextureFormat.ARGB32, true);
         sr = GetComponent<SpriteRenderer>();
-
+        polygonCollider = GetComponent<PolygonCollider2D>();
         GenerateSprite();
  
         UpdateTexture();
@@ -103,32 +105,19 @@ public class GroundScript : MonoBehaviour
         cloneTexture.Apply();
         UpdateTexture();
 
-        PolygonCollider2D polygonCollider = GetComponent<PolygonCollider2D>();
-        Sprite sprite = GetComponent<SpriteRenderer>().sprite;
-        for (int i = 0; i < polygonCollider.pathCount; i++) polygonCollider.SetPath(i, null);
-        polygonCollider.pathCount = sprite.GetPhysicsShapeCount();
-
-        List<Vector2> path = new List<Vector2>();
-        for (int i = 0; i < polygonCollider.pathCount; i++)
-        {
-            path.Clear();
-            sprite.GetPhysicsShape(i, path);
-            polygonCollider.SetPath(i, path.ToArray());
-        }
+        UpdateCollider();
     }
 
     public void UpdateCollider()
     {
-        PolygonCollider2D polygonCollider = GetComponent<PolygonCollider2D>();
-        Sprite sprite = GetComponent<SpriteRenderer>().sprite;
         for (int i = 0; i < polygonCollider.pathCount; i++) polygonCollider.SetPath(i, null);
-        polygonCollider.pathCount = sprite.GetPhysicsShapeCount();
+        polygonCollider.pathCount = sr.sprite.GetPhysicsShapeCount();
 
         List<Vector2> path = new List<Vector2>();
         for (int i = 0; i < polygonCollider.pathCount; i++)
         {
             path.Clear();
-            sprite.GetPhysicsShape(i, path);
+            sr.sprite.GetPhysicsShape(i, path);
             polygonCollider.SetPath(i, path.ToArray());
         }
     }
