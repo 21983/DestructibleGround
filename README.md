@@ -3,30 +3,25 @@
 In deze opdracht heb ik een destructible ground gemaakt. Je kan bommen met verschillende groottes laten vallen en de ground laten exploderen.
 
 ## Features
-- [Gat maken (get/set pixels)](https://github.com/21983/DestructibleGround/blob/701e2d5b72f42bd74ec1c063e8d04774eef0d405/DestructibleGround/Assets/Scripts/GroundScript.cs#L83-L104)
-- [Polygon Collider aanpassen](https://github.com/21983/DestructibleGround/blob/701e2d5b72f42bd74ec1c063e8d04774eef0d405/DestructibleGround/Assets/Scripts/GroundScript.cs#L120-L134)
-- [Iets unieks waar je trots op bent binnen de project](link)
+- [Gat maken (get/set pixels)](https://github.com/21983/DestructibleGround/blob/d50b77f3dfd9210e083f1d4d976f3e6f0fd7aa7a/DestructibleGround/Assets/Scripts/GroundScript.cs#L85-L106)
+- [Polygon Collider aanpassen](https://github.com/21983/DestructibleGround/blob/d50b77f3dfd9210e083f1d4d976f3e6f0fd7aa7a/DestructibleGround/Assets/Scripts/GroundScript.cs#L111-L123)
+- [Generate de sprite door de pixels te getten en te setten](https://github.com/21983/DestructibleGround/blob/d50b77f3dfd9210e083f1d4d976f3e6f0fd7aa7a/DestructibleGround/Assets/Scripts/GroundScript.cs#L69-L80)
 
 ## Software Anaylse 
-Welke software heb je voor deze proefopdracht onderzocht? En waarom heb je uiteindelijk gekozen voor de gekozen Software. Benoem hier specifieke argumenten.
+Ik heb gekozen om Unity C# te gebruiken omdat ik nog niet veel met sprites veranderen heb gewerkt. Ook heb ik hier voor gekozen omdat ik Unity vooral wil gebruiken voor games en dit handig is voor games. Ik had gelezen dat je in unity met Get- en SetPixel een sprite kan maken/veranderen dus daar wilde ik wel mee werken.
 
 ## Leerdoelen 
-Wat wil je bereiken met dit project? Formuleer dit kort, krachtig en haalbaar.
-- Het Flood-Fill algoritme snappen en toepassen
-- Het ontwikkelen van een generieke FSM.
-- etc. etc.
+-Sprite van vorm veranderen.
+-collider van een sprite veranderen.
+-geen performance issues krijgen door de sprite en collider te veranderen
 
 ## Planning 
-Je hebt grofweg 2 weken, hoe deel je deze twee weken in. Wat plan je wanneer om precies te doen?
-
 | | maandag | dinsdag | woensdag | donderdag | vrijdag |
 | --- | --- | --- | --- | --- | --- |
-|week 1 |
-|week 2 |
+|week 1 | opdrachten onderzoeken | | onderzoek destructible terrain | beginnen maken met sprites en tekenen | sprites tekenen |
+|week 2 | Pixels weghalen met de bom | collider veranderen zonder lagg | | documentatie |  |
 
 ## Bronnen
-Welke bronnen heb je gebruikt? Zowel youtube filmpjes als artikelen
-
-- [The Guide To Game Design](link)
-- [Alleatoric Algorithms](link)
-- [Flood-Fill Wikipedia](link)
+- [Collider](https://answers.unity.com/questions/722748/refreshing-the-polygon-collider-2d-upon-sprite-cha.html)
+- [Setpixels](https://docs.unity3d.com/ScriptReference/Texture2D.SetPixel.html)
+- [GetPixels](https://docs.unity3d.com/ScriptReference/Texture2D.GetPixels.html)
